@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue JS (Data Binding)</title>
+</head>
+
+<body>
+  <div id="app">
+    {{message}}
+    <br />
+    <input type="text" v-model="biodata.nama" />
+    <p>Nama : {{biodata.nama}}</p>
+    <br />
+    <input type="text" v-model="biodata.umur" />
+    <p>Nama : {{biodata.umur}}</p>
+  </div>
+
+  <!-- Pemanggilan file vue js -->
+  <script src="assets/vendor/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        message: "Hello Vue JS",
+        biodata: {
+          nama: "Aris Putra Buana",
+          umur: 23,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

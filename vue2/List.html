@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue JS (List)</title>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="item in items">
+        {{item.title}}
+        <br>
+        {{item.price}}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Pemanggilan file vue js -->
+  <script src="assets/vendor/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        items: [{
+            title: 'Produk 1',
+            price: 5000
+          },
+          {
+            title: 'Produk 2',
+            price: 7000
+          }
+        ]
+      },
+    });
+  </script>
+</body>
+
+</html>
